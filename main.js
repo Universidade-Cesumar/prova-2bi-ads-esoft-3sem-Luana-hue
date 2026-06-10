@@ -43,3 +43,9 @@ async function cadastrarMaterial() {
 
     listarMateriais();
 }
+
+document
+.getElementById("btn-cadastrar")
+.addEventListener("click", cadastrarMaterial);
+
+listarMateriais();
