@@ -18,3 +18,28 @@ async function listarMateriais() {
         `;
     });
 }
+
+async function cadastrarMaterial() {
+
+    const nome =
+    document.getElementById("input-nome").value;
+
+    const quantidade =
+    document.getElementById("input-quantidade").value;
+
+    const material = {
+        nome,
+        quantidade
+    };
+
+    await fetch(URL_API, {
+        method: "POST",
+        headers: {
+            "Content-Type":
+            "application/json"
+        },
+        body: JSON.stringify(material)
+    });
+
+    listarMateriais();
+}
