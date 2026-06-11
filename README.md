@@ -40,18 +40,6 @@ Conforme especificado na Sprint 1:
 * `btn-cadastrar`
 * `lista-materiais`
 
-## Como Executar
-
-1. Clone o repositório:
-
-   ```bash
-   git clone URL_DO_REPOSITORIO
-   ```
-
-2. Abra o arquivo `index.html` no navegador.
-
-3. Certifique-se de que a URL da MockAPI esteja configurada corretamente no arquivo `main.js`.
-
 ## API Utilizada
 
 MockAPI:
