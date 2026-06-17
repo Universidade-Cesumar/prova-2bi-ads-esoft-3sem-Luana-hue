@@ -10,14 +10,34 @@ async function listarMateriais() {
     lista.innerHTML = "";
 
     materiais.forEach(material => {
-        lista.innerHTML += `
-            <li>
-                ${material.nome} - Quantidade:
-                ${material.quantidade}
-            </li>
-        `;
-    });
-}
+    lista.innerHTML += `
+        <li>
+            <strong>${material.nome}</strong>
+            <br>
+            Estoque: ${material.quantidade}
+
+            <br><br>
+
+            <input
+                type="number"
+                id="input-retirada"
+                placeholder="Qtd retirar"
+            >
+
+            <button
+                class="btn-baixar"
+                onclick="baixarMaterial('${material.id}', ${material.quantidade})">
+                Retirar
+            </button>
+
+            <button
+                class="btn-excluir"
+                onclick="excluirMaterial('${material.id}')">
+                Excluir
+            </button>
+        </li>
+    `;
+});
 
 async function cadastrarMaterial() {
 
