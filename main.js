@@ -82,3 +82,12 @@ function validarRetirada(estoqueAtual, quantidadeRetirada) {
 
     return true;
 }
+
+async function excluirMaterial(id) {
+
+    await fetch(`${URL_API}/${id}`, {
+        method: "DELETE"
+    });
+
+    listarMateriais();
+}
