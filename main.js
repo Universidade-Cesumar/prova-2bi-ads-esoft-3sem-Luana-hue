@@ -7,6 +7,7 @@ async function listarMateriais() {
 
     const lista = document.getElementById("lista-materiais");
 
+
     lista.innerHTML = "";
 
     materiais.forEach(material => {
@@ -37,7 +38,8 @@ async function listarMateriais() {
             </button>
         </li>
     `;
-});
+ });
+}
 
 async function cadastrarMaterial() {
 
@@ -87,6 +89,44 @@ async function excluirMaterial(id) {
 
     await fetch(`${URL_API}/${id}`, {
         method: "DELETE"
+    });
+
+    listarMateriais();
+}
+
+
+async function baixarMaterial(id, estoqueAtual) {
+
+    const input =
+        event.target.parentElement
+        .querySelector("#input-retirada");
+
+    const quantidadeRetirada =
+        Number(input.value);
+
+    const valida =
+        validarRetirada(
+            estoqueAtual,
+            quantidadeRetirada
+        );
+
+    if (!valida) {
+        alert("Quantidade inválida!");
+        return;
+    }
+
+    const novoEstoque =
+        estoqueAtual - quantidadeRetirada;
+
+    await fetch(`${URL_API}/${id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type":
+            "application/json"
+        },
+        body: JSON.stringify({
+            quantidade: novoEstoque
+        })
     });
 
     listarMateriais();
