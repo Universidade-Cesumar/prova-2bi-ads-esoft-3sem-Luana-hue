@@ -94,3 +94,16 @@ h2 {
 .btn-baixar:hover {
     background-color: #1e8449;
 }
+
+.btn-excluir {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-excluir:hover {
+    background-color: #c0392b;
+}
