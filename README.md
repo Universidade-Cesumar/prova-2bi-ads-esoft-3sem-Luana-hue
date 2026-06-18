@@ -1,10 +1,10 @@
 # Controle de Almoxarifado
 
-Projeto desenvolvido para a Sprint 1 da avaliação prática de Desenvolvimento Web.
+Sistema web desenvolvido para o gerenciamento de materiais de um almoxarifado, permitindo cadastro, visualização, retirada e exclusão de itens através de integração com a MockAPI.
 
 ## Objetivo
 
-O sistema tem como objetivo auxiliar no controle de materiais de um almoxarifado, permitindo o cadastro e a visualização dos itens armazenados através de uma interface web conectada à MockAPI.
+O projeto foi desenvolvido como atividade prática da disciplina de Desenvolvimento Web, simulando um sistema de controle de estoque para auxiliar na organização e gerenciamento de materiais utilizados em aulas práticas.
 
 ## Funcionalidades
 
@@ -33,12 +33,18 @@ O sistema tem como objetivo auxiliar no controle de materiais de um almoxarifado
 
 ## IDs Obrigatórios Utilizados
 
-Conforme especificado na Sprint 1:
+## Sprint 1
 
-* `input-nome`
-* `input-quantidade`
-* `btn-cadastrar`
-* `lista-materiais`
+input-nome
+input-quantidade
+btn-cadastrar
+lista-materiais
+
+## Sprint 2
+
+input-retirada
+btn-baixar
+btn-excluir
 
 ## API Utilizada
 
@@ -58,6 +64,14 @@ Busca todos os materiais cadastrados e exibe na tela.
 
 Cadastra um novo material na API.
 
+## PUT
+
+Atualiza a quantidade de materiais após uma retirada de estoque.
+
+## DELETE
+
+Remove um material do sistema.
+
 ## Desenvolvedora
 
 Luana Taina Camargo Bueno
@@ -73,3 +87,21 @@ Luana Taina Camargo Bueno
 ✔ Listagem de materiais (GET)
 
 ✔ Interface estilizada com CSS
+
+## Sprint 2
+
+✔ Retirada de materiais do estoque (baixa de estoque)
+
+✔ Exclusão de materiais cadastrados
+
+✔ Atualização de estoque utilizando método PUT
+
+✔ Remoção de registros utilizando método DELETE
+
+✔ Validação para impedir
+
+✔ Quantidades negativas
+
+✔ Quantidade igual a zero
+
+✔ Retirada superior ao estoque disponível
