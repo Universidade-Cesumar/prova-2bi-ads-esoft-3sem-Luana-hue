@@ -6,14 +6,6 @@ Sistema web desenvolvido para o gerenciamento de materiais de um almoxarifado, p
 
 O projeto foi desenvolvido como atividade prática da disciplina de Desenvolvimento Web, simulando um sistema de controle de estoque para auxiliar na organização e gerenciamento de materiais utilizados em aulas práticas.
 
-## Funcionalidades
-
-* Cadastro de materiais;
-* Registro da quantidade disponível;
-* Listagem automática dos materiais cadastrados;
-* Integração com API REST utilizando MockAPI;
-* Atualização dinâmica da lista de materiais.
-
 ## Tecnologias Utilizadas
 
 * HTML5
@@ -76,17 +68,19 @@ Remove um material do sistema.
 
 Luana Taina Camargo Bueno
 
-## Sprint 1
+## Funcionalidades Implementadas
 
-✔ Estrutura HTML com IDs obrigatórios
+## Sprint 1 
 
-✔ Integração com MockAPI
+✔ Cadastro de materiais
 
-✔ Cadastro de materiais (POST)
+✔ Registro da quantidade em estoque
 
-✔ Listagem de materiais (GET)
+✔ Integração com MockAPI utilizando método POST
 
-✔ Interface estilizada com CSS
+✔ Listagem dinâmica dos materiais utilizando método GET
+
+✔ Interface responsiva e estilizada
 
 ## Sprint 2
 
@@ -94,9 +88,9 @@ Luana Taina Camargo Bueno
 
 ✔ Exclusão de materiais cadastrados
 
-✔ Atualização de estoque utilizando método PUT
+✔ Atualização de estoque utilizando método (PUT)
 
-✔ Remoção de registros utilizando método DELETE
+✔ Remoção de registros utilizando método (DELETE)
 
 ✔ Validação para impedir
 
