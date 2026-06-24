@@ -10,6 +10,25 @@ async function listarMateriais() {
 
     lista.innerHTML = "";
 
+    try {
+
+        const resposta =
+            await fetch(URL_API);
+
+        const materiais =
+            await resposta.json();
+
+    } catch (erro) {
+
+        alert(
+            "Erro ao carregar materiais."
+        );
+
+        console.error(erro);
+
+    }
+
+
 materiais.forEach(material => {
 
     const classe =
@@ -59,6 +78,24 @@ async function cadastrarMaterial() {
         quantidade
     };
 
+      try {
+
+        const resposta =
+            await fetch(URL_API);
+
+        const materiais =
+            await resposta.json();
+
+    } catch (erro) {
+
+        alert(
+            "Erro ao carregar materiais."
+        );
+
+        console.error(erro);
+
+    }
+
     await fetch(URL_API, {
         method: "POST",
         headers: {
@@ -92,6 +129,24 @@ function validarRetirada(estoqueAtual, quantidadeRetirada) {
 
 async function excluirMaterial(id) {
 
+      try {
+
+        const resposta =
+            await fetch(URL_API);
+
+        const materiais =
+            await resposta.json();
+
+    } catch (erro) {
+
+        alert(
+            "Erro ao carregar materiais."
+        );
+
+        console.error(erro);
+
+    }
+
     await fetch(`${URL_API}/${id}`, {
         method: "DELETE"
     });
@@ -118,6 +173,24 @@ async function baixarMaterial(id, estoqueAtual) {
     if (!valida) {
         alert("Quantidade inválida!");
         return;
+    }
+
+      try {
+
+        const resposta =
+            await fetch(URL_API);
+
+        const materiais =
+            await resposta.json();
+
+    } catch (erro) {
+
+        alert(
+            "Erro ao carregar materiais."
+        );
+
+        console.error(erro);
+
     }
 
     const novoEstoque =
