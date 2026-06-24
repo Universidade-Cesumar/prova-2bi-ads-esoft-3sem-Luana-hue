@@ -10,9 +10,15 @@ async function listarMateriais() {
 
     lista.innerHTML = "";
 
-    materiais.forEach(material => {
+materiais.forEach(material => {
+
+    const classe =
+        Number(material.quantidade) < 10
+        ? "estoque-critico"
+        : "";
+
     lista.innerHTML += `
-        <li>
+        <li class="${classe}">
             <strong>${material.nome}</strong>
             <br>
             Estoque: ${material.quantidade}
@@ -22,8 +28,7 @@ async function listarMateriais() {
             <input
                 type="number"
                 id="input-retirada"
-                placeholder="Qtd retirar"
-            >
+                placeholder="Qtd retirar">
 
             <button
                 class="btn-baixar"
@@ -38,7 +43,7 @@ async function listarMateriais() {
             </button>
         </li>
     `;
- });
+});
 }
 
 async function cadastrarMaterial() {
