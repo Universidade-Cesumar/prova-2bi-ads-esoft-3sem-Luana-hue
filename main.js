@@ -136,3 +136,33 @@ async function baixarMaterial(id, estoqueAtual) {
 
     listarMateriais();
 }
+
+document
+.getElementById("input-busca")
+.addEventListener("input", pesquisarMaterial);
+
+function pesquisarMaterial() {
+
+    const busca =
+        document
+        .getElementById("input-busca")
+        .value
+        .toLowerCase();
+
+    const itens =
+        document.querySelectorAll("#lista-materiais li");
+
+    itens.forEach(item => {
+
+        if (
+            item.textContent
+            .toLowerCase()
+            .includes(busca)
+        ) {
+            item.style.display = "block";
+        } else {
+            item.style.display = "none";
+        }
+
+    });
+}
