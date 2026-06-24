@@ -1,12 +1,14 @@
-# Controle de Almoxarifado
+#  Controle de Almoxarifado
 
-Sistema web desenvolvido para o gerenciamento de materiais de um almoxarifado, permitindo cadastro, visualização, retirada e exclusão de itens através de integração com a MockAPI.
+Sistema web desenvolvido para o gerenciamento de materiais de um almoxarifado, permitindo cadastro, visualização, retirada e exclusão de itens por meio da integração com a MockAPI.
 
-## Objetivo
+##  Objetivo
 
-O projeto foi desenvolvido como atividade prática da disciplina de Desenvolvimento Web, simulando um sistema de controle de estoque para auxiliar na organização e gerenciamento de materiais utilizados em aulas práticas.
+O projeto foi desenvolvido como atividade prática da disciplina de Desenvolvimento Web, simulando um sistema de controle de estoque para auxiliar no gerenciamento de materiais utilizados em aulas práticas.
 
-## Tecnologias Utilizadas
+---
+
+##  Tecnologias Utilizadas
 
 * HTML5
 * CSS3
@@ -14,7 +16,9 @@ O projeto foi desenvolvido como atividade prática da disciplina de Desenvolvime
 * Fetch API
 * MockAPI
 
-## Estrutura do Projeto
+---
+
+##  Estrutura do Projeto
 
 ```text
 ├── index.html
@@ -23,79 +27,130 @@ O projeto foi desenvolvido como atividade prática da disciplina de Desenvolvime
 └── README.md
 ```
 
-## IDs Obrigatórios Utilizados
+---
 
-## Sprint 1
-
-input-nome
-input-quantidade
-btn-cadastrar
-lista-materiais
-
-## Sprint 2
-
-input-retirada
-btn-baixar
-btn-excluir
-
-## API Utilizada
-
-MockAPI:
+##  API Utilizada
 
 ```javascript
 const URL_API = "https://6a29e4c4f59cb8f65f1db7d3.mockapi.io/materiais";
 ```
 
-### Operações Implementadas
+---
 
-#### GET
+##  IDs e Classes Obrigatórias
+
+### Sprint 1
+
+* `input-nome`
+* `input-quantidade`
+* `btn-cadastrar`
+* `lista-materiais`
+
+### Sprint 2
+
+* `input-retirada`
+* `btn-baixar`
+* `btn-excluir`
+
+### Sprint 3
+
+* `input-busca`
+* `total-items`
+* `estoque-critico`
+
+---
+
+##  Operações Implementadas
+
+### GET
 
 Busca todos os materiais cadastrados e exibe na tela.
 
-#### POST
+### POST
 
-Cadastra um novo material na API.
+Realiza o cadastro de novos materiais.
 
-## PUT
+### PUT
 
 Atualiza a quantidade de materiais após uma retirada de estoque.
 
-## DELETE
+### DELETE
 
 Remove um material do sistema.
 
-## Desenvolvedora
+---
 
-Luana Taina Camargo Bueno
+#  Funcionalidades Implementadas
 
-## Funcionalidades Implementadas
+## Sprint 1 - Fundação, API e Inventário
 
-## Sprint 1 
+* Cadastro de materiais;
+* Registro da quantidade em estoque;
+* Integração com MockAPI utilizando método POST;
+* Listagem dinâmica dos materiais utilizando método GET;
+* Interface responsiva e estilizada.
 
-✔ Cadastro de materiais
+## Sprint 2 - Regras de Negócio e Saídas
 
-✔ Registro da quantidade em estoque
+* Retirada de materiais do estoque (baixa de estoque);
+* Exclusão de materiais cadastrados;
+* Atualização de estoque utilizando método PUT;
+* Remoção de registros utilizando método DELETE;
+* Validação para impedir:
 
-✔ Integração com MockAPI utilizando método POST
+  * Quantidades negativas;
+  * Quantidades iguais a zero;
+  * Retiradas superiores ao estoque disponível.
 
-✔ Listagem dinâmica dos materiais utilizando método GET
+## Sprint 3 - Dashboard e Publicação
 
-✔ Interface responsiva e estilizada
+* Barra de pesquisa de materiais;
+* Dashboard com total de itens cadastrados;
+* Destaque visual para estoque crítico (menos de 10 unidades);
+* Tratamento de erros utilizando `try/catch`;
+* Preparação para publicação em nuvem.
 
-## Sprint 2
+---
 
-✔ Retirada de materiais do estoque (baixa de estoque)
+## ✔ Critérios Atendidos
 
-✔ Exclusão de materiais cadastrados
+### Sprint 1
 
-✔ Atualização de estoque utilizando método (PUT)
+* ✔ Cadastro de materiais
+* ✔ Integração com MockAPI
+* ✔ Listagem dinâmica de dados
+* ✔ Interface estilizada
 
-✔ Remoção de registros utilizando método (DELETE)
+### Sprint 2
 
-✔ Validação para impedir
+* ✔ Baixa de estoque
+* ✔ Exclusão de materiais
+* ✔ Atualização via PUT
+* ✔ Exclusão via DELETE
+* ✔ Validação das regras de negócio
 
-✔ Quantidades negativas
+### Sprint 3
 
-✔ Quantidade igual a zero
+* ✔ Barra de pesquisa
+* ✔ Dashboard com total de itens
+* ✔ Estoque crítico destacado
+* ✔ Tratamento de erros com try/catch
+* ✔ Projeto documentado
 
-✔ Retirada superior ao estoque disponível
+---
+
+##  Desenvolvedora
+
+**Luana Tainá Camargo Bueno**
+
+---
+
+##  Status do Projeto
+
+ Sprint 1 concluída
+
+ Sprint 2 concluída
+
+ Sprint 3 concluída
+
+## Projeto finalizado
