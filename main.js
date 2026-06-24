@@ -6,7 +6,7 @@ async function listarMateriais() {
     const materiais = await resposta.json();
 
     const lista = document.getElementById("lista-materiais");
-
+    document.getElementById("total-items").textContent = materiais.length;
 
     lista.innerHTML = "";
 
