@@ -107,3 +107,8 @@ h2 {
 .btn-excluir:hover {
     background-color: #c0392b;
 }
+
+.estoque-critico {
+    background-color: #ffe5e5 !important;
+    border-left: 5px solid red !important;
+}
